@@ -300,4 +300,7 @@ pip-selfcheck.json
 venv/*
 venv/
 
+migrations/
+migrations/*
+
 # End of file
