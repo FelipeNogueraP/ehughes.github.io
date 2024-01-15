@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+{% load wagtailcore_tags %}
+
+{% block body_class %}homepage{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="https://use.typekit.net/ukq6odx.css">
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+<link rel="stylesheet" href="static/style/wn.css">
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://kit.fontawesome.com/73d3ed437d.js" crossorigin="anonymous"></script>
+<script src="static/top.js"></script>
+<script src="static/bottom.js"></script>
+{% endblock %}
+
+{% block content %}
+<!-- Custom HTML Content Starts Here -->
+
+<video autoplay muted loop id="landing_page_video">
+    <source src="static/assets/back.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+</video>
+
+<article class="content">
+    <h1>Tell your story</h1>
+
+    <div class = "m1l">
+        <p>
+            Wavenumber is a “full-stack” product design and communication organization.  
+            We combine content, industrial design, and engineering to tell product stories. 
+            Our clients benefit by having a trusted partner to both develop and communicate their product. 
+            We understand the importance of the "why" as well as the "how", aligning engineering development with sales and marketing strategies.
+        </p>
+        
+        <p>We value real, honest relationships and take our work seriously. Successful outcomes are achieved
+            through application of our "full-stack" values.</p>
+        
+        <br>
+        
+        <h2> Create</h2>
+        <div class = "m2r">
+            <p>
+                Understand that you literally become what you think about. Bring to the world that which is not. Move toward how we want our things to be. Take action, collaborate and build teams. Iterate and refine. Be resilient and persevere.
+            </p>
+        </div>
+
+        <h2>Communicate</h2>
+        <div class = "m2r">
+            <p>
+                Tell stories about the “why” and connect to a purpose. Freely give what we know and embrace a mindset of generosity. Actively listen and be ready to take the role of student and teacher. Become comfortable with being vulnerable.
+            </p>
+        </div>
+        
+        <h2>Serve</h2>
+        <div class = "m2r">
+            <p>
+                Be your best by helping others be their best. Cultivate empathy and express gratitude. Give more than you ever expect to receive. Lead through service to others. Enable and empower others.
+            </p>
+        </div>
+        
+        <br>
+        
+        <h2> When we are doing these three things, everyone wins.</h2> 
+    </div>
+</article>
+
+<script> 
+    // Your JavaScript code here
+    var currentContent = "intro_content";
+    
+    // Select an element you want to check the font for
+    const elementToCheck = document.querySelector('body');
+  
+    // Get the computed font family of the element
+    const computedFont = window.getComputedStyle(elementToCheck).fontFamily;
+  
+    // Check if the computed font matches your specified font
+    if (computedFont.includes('mp')) {
+        console.log('Font successfully loaded.');
+    } else {
+        console.log('Font could not be loaded. Using fallback font.');
+    }
+</script>
+
+<!-- End of Custom HTML Content -->
+
+<!-- Wagtail Page Content -->
+{{ page.body|richtext }}
+
+{% endblock %}
