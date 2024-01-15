@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% load wagtailcore_tags %}
+{% load static %} 
+
+{% block title %}Wavenumber LLC{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="https://use.typekit.net/ukq6odx.css">
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+<link rel="stylesheet" href="{% static 'style/wn.css' %}">
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://kit.fontawesome.com/73d3ed437d.js" crossorigin="anonymous"></script>
+<script src="{% static 'top.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+<div class="static_background">
+
+<article class="content">
+    <h1>Full-stack engagement</h1>  
+		<div class = "m1l">
+	
+			  <p>We are a team bound by principles, not just technical acumen. What makes us different is mindset. We strive for the best outcomes using two core principles.</p>
+		
+			  <h2>Growth</h2>
+			  
+			  <div class = "m2r">	
+			  <p>
+				Freely give what you know and embrace a mindset of generosity. Eschew the scarcity mindset. Consider what you can add instead of what is available to take.
+			  </p>
+			  </div>
+			  
+			 <h2>Ownership</h2>
+			 <div class="m2r">
+		   
+			 <p>
+			  Take complete ownership of outcomes. Do what you say and make sure your word means something.   Learn from failure and be ready to grow.   Be accountable and do what is right even when no one is looking.  
+			 </p>
+		  </div>
+		   </div>
+	  
+			<br>
+  
+		   <h2>Offering</h2>  
+		   <div class = "m1l">	
+		
+		  <p>
+			We engage with customers at all stages of the product design process.  We feel that product design can be aligned to sales, marketing and communication to achieve maximum results.
+
+			A typical scope of work can include:
+		  </p>
+		  <ul>
+			<li>Product ideation and story telling</li>
+			<li>Proof of concept prototyping</li>
+			<li>Content creation and communication</li>
+			<li>Technical design reviews</li>
+			<li>Industrial design</li>
+			<li>Electronics engineering and circuit board design</li>
+			<li>Firmware/software development</li>
+			<li>Design for manufacture</li>
+  
+		  </ul>
+		  <p>
+			Please reach out using any of the communication channels below to start a conversation.
+		  </p>
+		  </div>
+	 </div>
+</article>
+
+<script>
+    var viewMode = getCookie("view-mode");
+    if(viewMode == "desktop"){
+        viewport.setAttribute('content', 'width=800');
+    } else if (viewMode == "mobile"){
+        viewport.setAttribute('content', 'width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no');
+    }
+</script>
+{% endblock %}

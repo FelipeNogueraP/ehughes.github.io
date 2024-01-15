@@ -11,3 +11,11 @@ class HomePage(Page):
     content_panels = Page.content_panels + [
         FieldPanel("body"),
     ]
+
+class EngagePage(Page):
+    body = RichTextField(blank=True)
+
+    content_panels = Page.content_panels + [
+        FieldPanel("body"),
+    ]
+    template = 'home/engage_page.html'

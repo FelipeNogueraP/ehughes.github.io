@@ -1,6 +1,6 @@
 var bottomHTML = `
     
-	  <div class="bottom_text" onclick="window.location.href='engage.html';">Engage</div>
+	  <div class="bottom_text" onclick="window.location.href="{% url 'engage' %}";">Engage</div>
       <div class="social-icons">
 	  <a href="#" onclick="location.href='mailto:'+String.fromCharCode(101,104,117,103,104,101,115,64,119,97,118,101,110,117,109,98,101,114,46,110,101,116); return false;" class="social-icon"><i class="fas fa-envelope"></i></a>
         <a href="https://twitter.com/emh203" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a>

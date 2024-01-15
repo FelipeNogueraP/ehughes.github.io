@@ -2,25 +2,27 @@
 
 {% load wagtailcore_tags %}
 
+{% load static %}
+
 {% block body_class %}homepage{% endblock %}
 
 {% block extra_css %}
 <link rel="stylesheet" href="https://use.typekit.net/ukq6odx.css">
 <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
-<link rel="stylesheet" href="static/style/wn.css">
+<link rel="stylesheet" href="{% static 'style/wn.css' %}">
+
 {% endblock %}
 
 {% block extra_js %}
 <script src="https://kit.fontawesome.com/73d3ed437d.js" crossorigin="anonymous"></script>
-<script src="static/top.js"></script>
-<script src="static/bottom.js"></script>
+<script src="{% static 'top.js' %}"></script>
+<script src="{% static 'bottom.js' %}"></script>
 {% endblock %}
 
 {% block content %}
-<!-- Custom HTML Content Starts Here -->
 
 <video autoplay muted loop id="landing_page_video">
-    <source src="static/assets/back.mp4" type="video/mp4">
+    <source src="{% static 'assets/back.mp4' %}" type="video/mp4">
     Your browser does not support HTML5 video.
 </video>
 
@@ -84,8 +86,6 @@
         console.log('Font could not be loaded. Using fallback font.');
     }
 </script>
-
-<!-- End of Custom HTML Content -->
 
 <!-- Wagtail Page Content -->
 {{ page.body|richtext }}
